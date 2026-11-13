@@ -200,6 +200,10 @@ public class MispPartnerPage extends BasePage {
 		return isElementDisplayed(createPartnerButton);
 	}
 
+	public boolean isCreatePartnerButtonPresent() {
+		return isElementDisplayedQuick(createPartnerButton, ABSENCE_CHECK_TIMEOUT);
+	}
+
 	public boolean isCreatePartnerButtonEnabled() {
 		return isElementEnabled(createPartnerButton);
 	}
@@ -493,6 +497,7 @@ public class MispPartnerPage extends BasePage {
 
 	public void clickOnPartnerEmailIdTextBox() {
 		clickOnElement(partnerEmailIdTextBox);
+		focus(partnerEmailIdTextBox);
 	}
 
 	public boolean isUsernameMustStartWithLetterErrorDisplayed() {

@@ -25,6 +25,7 @@ public class GlobalConstants {
 	public static final String PARTNER_ADMIN = "pmpui-v2";
 	public static final String PARTNER_PASSWORD = "mosip123";
 	public static final String AUTH_PARTNER_ID = "pmpui-auth";
+	public static final String NON_ADMIN_USER_ID = "pmpui-ovpnoadmin";
 	public static final String FTM_PARTNER_ID = "pmpui-ftm";
 	public static final String MISP_PARTNER = "MISP Partner";
 	public static final String MISP_PARTNER_USER = "pmpui-misp";
@@ -48,9 +49,9 @@ public class GlobalConstants {
 	public static final String LIST_OF_DEVICES_TITLE_COUNT_1 = "List of Devices (1)";
 	public static final String LIST_OF_DEVICES_TITLE_COUNT_28 = "List of Devices (28)";
 	public static final String LIST_OF_DEVICES_TITLE_PENDING_FOR_APPROVAL = "List of Devices (35)";
-	public static final String Linked_Device38 = "38";
 	public static final String Linked_Device0 = "0";
-	public static final String Linked_Device6 = "6";
+	public static final String isLinkedDeviceCountNonZero = "Verify the linked device count is displayed as a non-zero number";
+	public static final String isLinkedDeviceCountNumeric = "Verify the linked device count is displayed as a number";
 	public static final String INITIAL_MAKE = "Enter Make";
 	public static final String INITIAL_MODEL = "Enter Model";
 	public static final String DEACTIVATED_BACKGROUND = "bg-[#EAECF0] text-[#525252]";
@@ -74,9 +75,11 @@ public class GlobalConstants {
 	public static final String CERT_SECTION_DEACTIVATED_BG = "bg-gray-100";
 	public static final String ORGANISATION = "Organisation";
 	public static final String SBI_ID = "SBI ID";
-	public static final String LIST_OF_LINKED_DEVICES_COUNT_31 = "List of Linked Devices (4)";
+	public static final String isFilteredLinkedDevicesCountShown = "Verify the linked devices title shows a non-zero count after filtering";
+	public static final String isFilteredLinkedDevicesStatusApproved = "Verify every linked device listed after filtering by Approved has Approved status";
 	public static final String BREADCUMB_TEXT_OF_CREATE_PARTNER = "Home/ List of Partners";
-	public static final String LIST_OF_SBIS_TITLE_COUNT_29 = "List of SBIs (29)";
+	public static final String isDeactivatedSbiCountShown = "Verify the Deactivated filter shows a non-zero count of SBIs";
+	public static final String isDeactivatedDeviceCountShown = "Verify the Deactivated filter shows a non-zero count of devices";
 	public static final String POLICIES_ADMIN = "pmpui-policyadmin";
 	public static final String POLICIES_USER_ID = "pmpui-policies";
 	public static final String APPID = "appId";
@@ -1550,6 +1553,9 @@ public class GlobalConstants {
 	public static final String isPartnerTypeDropdownOptionCountCorrect = "Verify that the Partner Type dropdown displays the expected partner options, even if the total count changes dynamically.";
 	public static final String isManualAdjudicationPartnerOptionDisplayed = "Verify that Manual Adjudication Partner option is displayed in the Partner Type dropdown.";
 	public static final String ONLINE_VERIFICATION_PARTNER = "Online Verification Partner";
+	public static final String ONLINE_VERIFICATION_PARTNER_ADDRESS = "ovpaddress";
+	public static final String ONLINE_VERIFICATION_PARTNER_CONTACT_NUMBER = "9898989898";
+	public static final String ONLINE_VERIFICATION_PARTNER_NOTIFICATION_LANGUAGE = "English";
 	public static final String OVP_PARTNER_USER = "pmpui-ovp";
 	public static final String OVP_PARTNER_USER_2 = "pmpui-ovp2";
 	public static final String OVP_PARTNER_EMAIL = "pmpui-ovp@test.com";
@@ -1616,6 +1622,24 @@ public class GlobalConstants {
 	public static final String MOSIP_SIGNED_CERTIFICATE_DOWNLOADED = "MOSIP Signed Certificate is downloaded";
 	public static final String REPEAT_CERTIFICATE_DOWNLOAD = "The same certificate can be downloaded again";
 	public static final String GO_BACK_NAVIGATES_TO_PARTNER_LIST = "Go Back returns to the list of partners";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_OPTION_DISPLAYED = "View and Deactivate are available for an active Online Verification Partner";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_POPUP_DISPLAYED = "Deactivate confirmation popup is displayed";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_POPUP_BUTTONS_DISPLAYED = "Confirm and Cancel are displayed on the deactivate popup";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_POPUP_PARTNER_ID = "Deactivate popup shows the Partner ID";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_POPUP_ORGANISATION = "Deactivate popup shows the Organisation";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_CANCEL_CLOSES_POPUP = "Cancel closes the deactivate popup";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_CANCEL_KEEPS_ACTIVE = "Cancel leaves the Online Verification Partner Active";
+	public static final String ONLINE_VERIFICATION_PARTNER_ACTIVE_FILTER_ELIGIBLE = "Active Online Verification Partners are listed for deactivation";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATED = "Online Verification Partner status changes to Deactivated";
+	public static final String ONLINE_VERIFICATION_PARTNER_REMAINS_ON_PARTNER_LIST = "Partner list stays open after deactivation";
+	public static final String ONLINE_VERIFICATION_PARTNER_STATUS_UPDATES_WITHOUT_REFRESH = "Deactivated status is shown without a manual refresh";
+	public static final String ONLINE_VERIFICATION_PARTNER_SORT_ORDER_UNCHANGED = "Partner list order is unchanged after deactivation";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATED_IN_SEARCH = "Search by Partner ID shows the deactivated Online Verification Partner";
+	public static final String ONLINE_VERIFICATION_PARTNER_FILTER_AFTER_DEACTIVATION = "Online Verification Partner filter still lists the deactivated partner";
+	public static final String ONLINE_VERIFICATION_PARTNER_VIEW_AFTER_DEACTIVATION = "View still opens for a deactivated Online Verification Partner";
+	public static final String ONLINE_VERIFICATION_PARTNER_ONLY_STATUS_CHANGES = "Only the status changes after deactivation";
+	public static final String ONLINE_VERIFICATION_PARTNER_DEACTIVATE_DISABLED = "Deactivate is disabled for a deactivated Online Verification Partner";
+	public static final String ONLINE_VERIFICATION_PARTNER_NON_ADMIN_CANNOT_DEACTIVATE = "A user without PARTNER_ADMIN stays on the main page";
 
 	public static final String CANCEL_CONFIRMATION_POPUP_TEXT = "Your changes will be lost, are you sure you want to proceed?";
 	public static final String PARTNER_STATUS_ACTIVE = "Active";
@@ -1721,7 +1745,7 @@ public class GlobalConstants {
 	public static final String isUsernameStartWithLetterEnforced = "Verify that the Username field rejects values that do not start with a letter and displays an appropriate validation error.";
 	public static final String isUsernameInvalidStartingCharsRejected = "Verify that a username starting with a digit or special character is rejected with a validation error.";
 	public static final String isWhitespaceRejectedInUsername = "Verify that a username containing whitespace characters is either rejected with a validation error or has the whitespace silently stripped.";
-	public static final String isUsernameMaxLengthEnforced = "Verify that the Username field does not accept more than 36 characters.";
+	public static final String isUsernameMaxLengthEnforced = "Verify that self-registration rejects a Username longer than 36 characters.";
 
 	public static final String isNotificationLanguageDropdownHasOptions = "Verify that the Notification Language dropdown contains at least one selectable language option.";
 	public static final String isNotificationLanguageSelectable = "Verify that the user can successfully select a notification language from the Notification Language dropdown.";
@@ -1912,8 +1936,8 @@ public class GlobalConstants {
 	public static final String isExpirationDateSameAsBrowserDateFormat = "Verify if expiration date is displayed in the browser locale date format";
 	public static final String isExpirationDateNotBeforeCreationDate = "Verify if the API Key expiration date is not earlier than its creation date";
 	public static final String isRtlLayoutAppliedForArabic = "Verify the page renders right-to-left (body dir=rtl) when logged in with Arabic";
-	public static final String isEditApiKeyPageTextDisplayedInArabic = "Verify the Edit API Key page's labels, buttons and messages are displayed in Arabic";
-	public static final String isApiKeyActionMenuTextDisplayedInArabic = "Verify the API Key action menu options are displayed in Arabic";
+	public static final String isEditApiKeyPageTextDisplayedInLoginLanguage = "Verify the Edit API Key page's labels, buttons and messages are displayed in the login language";
+	public static final String isApiKeyActionMenuTextDisplayedInLoginLanguage = "Verify the API Key action menu options are displayed in the login language";
 	public static final String isEditApiKeyPageTextDisplayedInFrench = "Verify the Edit API Key page's labels, buttons and messages are displayed in French";
 	public static final String isApiKeyActionMenuTextDisplayedInFrench = "Verify the API Key action menu options are displayed in French";
 	public static final String isEditExpiryDateBlockedForExpiredKey = "Verify clicking Edit Expiry Date on an already-expired (Deactivated) key does not navigate to the Edit API Key page";
@@ -2088,7 +2112,7 @@ public class GlobalConstants {
 	public static final String MISP_LICENSEKEY_DEACTIVATE_CONFIRM_TEST = "misplicensekeydeactivateconfirmtest";
 	public static final String MISP_LICENSEKEY_ROW_GREYED_OUT_TEST = "misplicensekeyrowgreyedouttest";
 	public static final String isRegisterEmailFieldInvalidForMalformedEmail = "Verify the Email field is flagged invalid for a malformed email address during self-registration";
-	public static final String isRegisterSubmitButtonDisabledWithoutUsernameAndEmail = "Verify the Submit button remains disabled when Username and Email are not entered during self-registration";
+	public static final String isRegisterSubmitButtonDisabledWithoutUsernameAndEmail = "Verify self-registration is blocked when Username and Email are not entered";
 	public static final String MISP_MINIMAL_EMAIL = "hm@gmail.co.on";
 	public static final String isMinimalEmailRegistrationSuccessful = "Verify self-registration succeeds with a minimal-length email ID";
 	public static final String MISP_MINIMAL_USERNAME = "HM";
@@ -2098,5 +2122,20 @@ public class GlobalConstants {
 	public static final String STATUS_COLUMN_HEADER_ID = "devicesList.status_header";
 	public static final String isDeviceTypeFilterReturningOnlyMatchingDevices = "Verify the Device Type filter lists only devices of the selected type";
 	public static final String isStatusFilterReturningOnlyMatchingDevices = "Verify the Status filter lists only devices in the selected status";
+	public static final String isIntermediateCAValidFromAndValidToDateFormatValid = "Verify if intermediate CA Valid From and Valid To columns are in browser date format";
+	public static final String isIntermediateCAUploadedTimeDateFormatValid = "Verify if intermediate CA Uploaded Time column is in browser date format";
+	public static final String PARTNER_POLICY_LINKING_COUNT_DESCRIPTION_SUFFIX = " Policy requests are currently pending";
+	public static final String isPartnerPolicyLinkingCountDisplayed = "Verify if pending count is displayed on Partner - Policy Linking card";
+	public static final String isPartnerPolicyLinkingCountNumeric = "Verify if Partner - Policy Linking pending count is numeric";
+	public static final String isPartnerPolicyLinkingCountDescriptionDisplayedOnHover = "Verify if Partner - Policy Linking count description is displayed on hover";
+	public static final String isPartnerPolicyLinkingCountDescriptionTextCorrect = "Verify if Partner - Policy Linking count description text is correct";
+	public static final String SBI_DEVICE_COUNT_DESCRIPTION_MIDDLE = " SBI and ";
+	public static final String SBI_DEVICE_COUNT_DESCRIPTION_SUFFIX = " Device requests are currently pending";
+	public static final String isSbiDeviceCountDisplayed = "Verify if pending count is displayed on SBI - Device card";
+	public static final String isSbiDeviceCountFormatValid = "Verify if SBI - Device pending count is in '<sbi> | <device>' format";
+	public static final String isSbiDeviceCountDescriptionDisplayedOnHover = "Verify if SBI - Device count description is displayed on hover";
+	public static final String isSbiDeviceCountDescriptionTextCorrect = "Verify if SBI - Device count description text is correct";
+	public static final String PENDING_REQUESTS_CARD_TEXT = "Pending Requests";
+	public static final String isPendingRequestsCardAbsentForPartnerAdmin = "Verify if Pending Requests card is not displayed in Partner Admin dashboard";
 
 }
